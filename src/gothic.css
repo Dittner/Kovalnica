@@ -1,0 +1,23 @@
+/* @font-face {
+    font-family: 'gothic';
+    src: url('fonts/DreiFraktur-Mac.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'pirulen';
+    src: url('fonts/Pirulen.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+} */
+
+@font-face {
+    font-family: 'hermann';
+    src: url('fonts/DSHermannGotisch.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}

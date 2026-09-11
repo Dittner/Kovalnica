@@ -1,0 +1,21 @@
+{
+  "name": "kovalnica-web",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "flinker": "^2.0.6",
+    "flinker-dom": "^1.1.22",
+    "flinker-markdown": "^1.1.32"
+},
+"devDependencies": {
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0",
+    "vite-plugin-static-copy": "^3.4.0"
+  }
+}
