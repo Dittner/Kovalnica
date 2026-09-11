@@ -139,18 +139,6 @@ blockquote::before {
     display: block;
 }
 
-/* figure {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-} */
-
-/* 
-audio::-webkit-media-controls-panel {
-    background-color: blue !important;
-} */
-
 
 /******************************/
 /*-------- SCROLLBAR ---------*/

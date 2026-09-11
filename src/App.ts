@@ -44,7 +44,7 @@ export function App() {
       //ModalView()
       AppFooter()
     })
-    //.onClick(() => globalContext.app.$dropdownState.value = '')
+  //.onClick(() => globalContext.app.$dropdownState.value = '')
 }
 
 
@@ -60,7 +60,7 @@ export const Logo = () => {
       s.textDecoration = 'none'
     })
     .whenHovered(s => {
-      s.textColor = theme().header
+      s.textColor = theme().accent + 'cc'
       s.textDecoration = 'none'
     })
     .onClick((e) => {
@@ -166,23 +166,22 @@ const PageUidRenderer = (uid: PageUid) => {
       //s.width = '100%'
       s.paddingVertical = '10px'
       s.paddingHorizontal = '10px'
-      s.fontSize = theme().fontSizeS
+      s.fontSize = theme().fontSize
       s.fontFamily = FontFamily.VERDANA
-      s.fontWeight = 'bold'
       s.textColor = theme().text
       s.text = pageUidToName(uid)
-      s.borderBottom = '4px solid ' + theme().transparent
+      s.borderBottom = '2px solid ' + theme().transparent
       s.href = '/' + uid
       s.whiteSpace = 'nowrap'
       s.textDecoration = 'none'
     })
     .whenHovered(s => {
-      s.textColor = theme().header
+      s.textColor = theme().accent + 'cc'
       s.textDecoration = 'none'
     })
     .whenSelected(s => {
       s.textColor = theme().menuSelected
-      s.borderBottom = '4px solid ' + theme().menuSelected
+      s.borderBottom = '4px solid ' + theme().accent
       s.textDecoration = 'none'
     })
     .onClick((e) => {
@@ -266,9 +265,10 @@ export const AppFooter = () => {
       s.bgColor = darkTheme().appBg
       s.paddingVertical = '20px'
       s.gap = '5px'
+      s.layer = ViewLayer.ZERO
     }).children(() => {
       HSeparator().react(s => {
-        s.width = layout().contentWidth - 2*layout().paddingHorizontal + 'px'
+        s.width = layout().contentWidth - 2 * layout().paddingHorizontal + 'px'
       })
 
       ContactsPanel()

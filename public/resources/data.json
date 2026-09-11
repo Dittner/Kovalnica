@@ -50,6 +50,18 @@
                             "files": null
                         },
                         {
+                            "id": "S38.jpg",
+                            "path": "data/photos/01_stairs/S38.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "S39.jpg",
+                            "path": "data/photos/01_stairs/S39.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
                             "id": "S11.jpg",
                             "path": "data/photos/01_stairs/S11.jpg",
                             "is_dir": false,
@@ -70,18 +82,6 @@
                         {
                             "id": "S01.jpg",
                             "path": "data/photos/01_stairs/S01.jpg",
-                            "is_dir": false,
-                            "files": null
-                        },
-                        {
-                            "id": "S15.jpg",
-                            "path": "data/photos/01_stairs/S15.jpg",
-                            "is_dir": false,
-                            "files": null
-                        },
-                        {
-                            "id": "S14.jpg",
-                            "path": "data/photos/01_stairs/S14.jpg",
                             "is_dir": false,
                             "files": null
                         },
@@ -116,6 +116,12 @@
                             "files": null
                         },
                         {
+                            "id": "S32.jpg",
+                            "path": "data/photos/01_stairs/S32.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
                             "id": "S26.jpg",
                             "path": "data/photos/01_stairs/S26.jpg",
                             "is_dir": false,
@@ -128,8 +134,20 @@
                             "files": null
                         },
                         {
+                            "id": "S33.jpg",
+                            "path": "data/photos/01_stairs/S33.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
                             "id": "S25.jpg",
                             "path": "data/photos/01_stairs/S25.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "S31.jpg",
+                            "path": "data/photos/01_stairs/S31.jpg",
                             "is_dir": false,
                             "files": null
                         },
@@ -146,14 +164,14 @@
                             "files": null
                         },
                         {
-                            "id": "S24.jpg",
-                            "path": "data/photos/01_stairs/S24.jpg",
+                            "id": "S30.jpg",
+                            "path": "data/photos/01_stairs/S30.jpg",
                             "is_dir": false,
                             "files": null
                         },
                         {
-                            "id": "S08.jpg",
-                            "path": "data/photos/01_stairs/S08.jpg",
+                            "id": "S24.jpg",
+                            "path": "data/photos/01_stairs/S24.jpg",
                             "is_dir": false,
                             "files": null
                         },
@@ -164,14 +182,26 @@
                             "files": null
                         },
                         {
+                            "id": "S34.jpg",
+                            "path": "data/photos/01_stairs/S34.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "S35.jpg",
+                            "path": "data/photos/01_stairs/S35.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
                             "id": "S21.jpg",
                             "path": "data/photos/01_stairs/S21.jpg",
                             "is_dir": false,
                             "files": null
                         },
                         {
-                            "id": "S09.jpg",
-                            "path": "data/photos/01_stairs/S09.jpg",
+                            "id": "S37.jpg",
+                            "path": "data/photos/01_stairs/S37.jpg",
                             "is_dir": false,
                             "files": null
                         },
@@ -184,6 +214,24 @@
                         {
                             "id": "S22.jpg",
                             "path": "data/photos/01_stairs/S22.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "S36.jpg",
+                            "path": "data/photos/01_stairs/S36.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "S40.jpg",
+                            "path": "data/photos/01_stairs/S40.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "S41.jpg",
+                            "path": "data/photos/01_stairs/S41.jpg",
                             "is_dir": false,
                             "files": null
                         }
@@ -219,8 +267,26 @@
                             "files": null
                         },
                         {
+                            "id": "V12.jpg",
+                            "path": "data/photos/04_visors/V12.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "V13.jpg",
+                            "path": "data/photos/04_visors/V13.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
                             "id": "V07.jpg",
                             "path": "data/photos/04_visors/V07.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "V11.jpg",
+                            "path": "data/photos/04_visors/V11.jpg",
                             "is_dir": false,
                             "files": null
                         },
@@ -233,6 +299,24 @@
                         {
                             "id": "V04.jpg",
                             "path": "data/photos/04_visors/V04.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "V10.jpg",
+                            "path": "data/photos/04_visors/V10.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "V09.jpg",
+                            "path": "data/photos/04_visors/V09.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "V08.jpg",
+                            "path": "data/photos/04_visors/V08.jpg",
                             "is_dir": false,
                             "files": null
                         }
@@ -286,12 +370,6 @@
                             "files": null
                         },
                         {
-                            "id": "G25.jpg",
-                            "path": "data/photos/02_gates/G25.jpg",
-                            "is_dir": false,
-                            "files": null
-                        },
-                        {
                             "id": "G24.jpg",
                             "path": "data/photos/02_gates/G24.jpg",
                             "is_dir": false,
@@ -304,8 +382,8 @@
                             "files": null
                         },
                         {
-                            "id": "G26.jpg",
-                            "path": "data/photos/02_gates/G26.jpg",
+                            "id": "G27.jpg",
+                            "path": "data/photos/02_gates/G27.jpg",
                             "is_dir": false,
                             "files": null
                         },
@@ -342,6 +420,18 @@
                         {
                             "id": "G15.jpg",
                             "path": "data/photos/02_gates/G15.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "G29.jpg",
+                            "path": "data/photos/02_gates/G29.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "G28.jpg",
+                            "path": "data/photos/02_gates/G28.jpg",
                             "is_dir": false,
                             "files": null
                         },
@@ -480,6 +570,12 @@
                             "files": null
                         },
                         {
+                            "id": "O10.jpg",
+                            "path": "data/photos/05_others/O10.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
                             "id": "O04.jpg",
                             "path": "data/photos/05_others/O04.jpg",
                             "is_dir": false,
@@ -492,6 +588,12 @@
                             "files": null
                         },
                         {
+                            "id": "O11.jpg",
+                            "path": "data/photos/05_others/O11.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
                             "id": "O07.jpg",
                             "path": "data/photos/05_others/O07.jpg",
                             "is_dir": false,
@@ -500,6 +602,18 @@
                         {
                             "id": "O06.jpg",
                             "path": "data/photos/05_others/O06.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "O08.jpg",
+                            "path": "data/photos/05_others/O08.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "O09.jpg",
+                            "path": "data/photos/05_others/O09.jpg",
                             "is_dir": false,
                             "files": null
                         }
@@ -554,6 +668,18 @@
                             "files": null
                         },
                         {
+                            "id": "S38.jpg",
+                            "path": "data/preload/01_stairs/S38.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "S39.jpg",
+                            "path": "data/preload/01_stairs/S39.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
                             "id": "S11.jpg",
                             "path": "data/preload/01_stairs/S11.jpg",
                             "is_dir": false,
@@ -574,18 +700,6 @@
                         {
                             "id": "S01.jpg",
                             "path": "data/preload/01_stairs/S01.jpg",
-                            "is_dir": false,
-                            "files": null
-                        },
-                        {
-                            "id": "S15.jpg",
-                            "path": "data/preload/01_stairs/S15.jpg",
-                            "is_dir": false,
-                            "files": null
-                        },
-                        {
-                            "id": "S14.jpg",
-                            "path": "data/preload/01_stairs/S14.jpg",
                             "is_dir": false,
                             "files": null
                         },
@@ -620,6 +734,12 @@
                             "files": null
                         },
                         {
+                            "id": "S32.jpg",
+                            "path": "data/preload/01_stairs/S32.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
                             "id": "S26.jpg",
                             "path": "data/preload/01_stairs/S26.jpg",
                             "is_dir": false,
@@ -632,8 +752,20 @@
                             "files": null
                         },
                         {
+                            "id": "S33.jpg",
+                            "path": "data/preload/01_stairs/S33.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
                             "id": "S25.jpg",
                             "path": "data/preload/01_stairs/S25.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "S31.jpg",
+                            "path": "data/preload/01_stairs/S31.jpg",
                             "is_dir": false,
                             "files": null
                         },
@@ -650,14 +782,14 @@
                             "files": null
                         },
                         {
-                            "id": "S24.jpg",
-                            "path": "data/preload/01_stairs/S24.jpg",
+                            "id": "S30.jpg",
+                            "path": "data/preload/01_stairs/S30.jpg",
                             "is_dir": false,
                             "files": null
                         },
                         {
-                            "id": "S08.jpg",
-                            "path": "data/preload/01_stairs/S08.jpg",
+                            "id": "S24.jpg",
+                            "path": "data/preload/01_stairs/S24.jpg",
                             "is_dir": false,
                             "files": null
                         },
@@ -668,14 +800,26 @@
                             "files": null
                         },
                         {
+                            "id": "S34.jpg",
+                            "path": "data/preload/01_stairs/S34.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "S35.jpg",
+                            "path": "data/preload/01_stairs/S35.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
                             "id": "S21.jpg",
                             "path": "data/preload/01_stairs/S21.jpg",
                             "is_dir": false,
                             "files": null
                         },
                         {
-                            "id": "S09.jpg",
-                            "path": "data/preload/01_stairs/S09.jpg",
+                            "id": "S37.jpg",
+                            "path": "data/preload/01_stairs/S37.jpg",
                             "is_dir": false,
                             "files": null
                         },
@@ -688,6 +832,24 @@
                         {
                             "id": "S22.jpg",
                             "path": "data/preload/01_stairs/S22.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "S36.jpg",
+                            "path": "data/preload/01_stairs/S36.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "S40.jpg",
+                            "path": "data/preload/01_stairs/S40.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "S41.jpg",
+                            "path": "data/preload/01_stairs/S41.jpg",
                             "is_dir": false,
                             "files": null
                         }
@@ -723,8 +885,26 @@
                             "files": null
                         },
                         {
+                            "id": "V12.jpg",
+                            "path": "data/preload/04_visors/V12.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "V13.jpg",
+                            "path": "data/preload/04_visors/V13.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
                             "id": "V07.jpg",
                             "path": "data/preload/04_visors/V07.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "V11.jpg",
+                            "path": "data/preload/04_visors/V11.jpg",
                             "is_dir": false,
                             "files": null
                         },
@@ -737,6 +917,24 @@
                         {
                             "id": "V04.jpg",
                             "path": "data/preload/04_visors/V04.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "V10.jpg",
+                            "path": "data/preload/04_visors/V10.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "V09.jpg",
+                            "path": "data/preload/04_visors/V09.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "V08.jpg",
+                            "path": "data/preload/04_visors/V08.jpg",
                             "is_dir": false,
                             "files": null
                         }
@@ -790,12 +988,6 @@
                             "files": null
                         },
                         {
-                            "id": "G25.jpg",
-                            "path": "data/preload/02_gates/G25.jpg",
-                            "is_dir": false,
-                            "files": null
-                        },
-                        {
                             "id": "G24.jpg",
                             "path": "data/preload/02_gates/G24.jpg",
                             "is_dir": false,
@@ -808,8 +1000,8 @@
                             "files": null
                         },
                         {
-                            "id": "G26.jpg",
-                            "path": "data/preload/02_gates/G26.jpg",
+                            "id": "G27.jpg",
+                            "path": "data/preload/02_gates/G27.jpg",
                             "is_dir": false,
                             "files": null
                         },
@@ -846,6 +1038,18 @@
                         {
                             "id": "G15.jpg",
                             "path": "data/preload/02_gates/G15.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "G29.jpg",
+                            "path": "data/preload/02_gates/G29.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "G28.jpg",
+                            "path": "data/preload/02_gates/G28.jpg",
                             "is_dir": false,
                             "files": null
                         },
@@ -984,6 +1188,12 @@
                             "files": null
                         },
                         {
+                            "id": "O10.jpg",
+                            "path": "data/preload/05_others/O10.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
                             "id": "O04.jpg",
                             "path": "data/preload/05_others/O04.jpg",
                             "is_dir": false,
@@ -996,6 +1206,12 @@
                             "files": null
                         },
                         {
+                            "id": "O11.jpg",
+                            "path": "data/preload/05_others/O11.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
                             "id": "O07.jpg",
                             "path": "data/preload/05_others/O07.jpg",
                             "is_dir": false,
@@ -1004,6 +1220,18 @@
                         {
                             "id": "O06.jpg",
                             "path": "data/preload/05_others/O06.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "O08.jpg",
+                            "path": "data/preload/05_others/O08.jpg",
+                            "is_dir": false,
+                            "files": null
+                        },
+                        {
+                            "id": "O09.jpg",
+                            "path": "data/preload/05_others/O09.jpg",
                             "is_dir": false,
                             "files": null
                         }

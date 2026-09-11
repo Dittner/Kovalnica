@@ -35,6 +35,7 @@ export const AboutView = () => {
           //s.layer = ViewLayer.TWO
           s.gap = '0'
           //s.paddingHorizontal = '20px'
+          s.overflow = 'clip'
         })
 
       Markdown()
@@ -65,22 +66,12 @@ export const Header = () => {
     .children(() => {
       image()
         .react(s => {
-          //s.position = 'fixed'
-          //s.opacity = '0.75'
-          //s.left = '0'
           s.top = '0'
-          //s.maskImage = 'linear-gradient(to right, #00000060, #000000cc)'
           s.src = 'resources/assets/app_bg.jpg'
-          // if (layout().isMobile)
-          //   s.width = 2*window.innerWidth + 'px'
-          // else
-          //   
-          s.maxWidth = window.innerWidth + 'px'
-          s.maxHeight = '600px'
-          s.height = window.innerHeight / 2 - 50 + 'px'
-
-          //s.layer = '0'
-          //s.animate = 'opacity 500ms'
+          const hei = Math.min(600, window.innerHeight / 2 - 50)
+          s.height = hei + 'px'
+          s.maxWidth = 'unset'
+          s.width = 'auto'
         })
 
       spacer()

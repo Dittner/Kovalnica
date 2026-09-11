@@ -31,7 +31,6 @@ export class GalleryVM extends ViewModel<GalleryPageState> {
   }
 
   protected override stateDidChange(state: GalleryPageState) {
-    if (!this.activate) return
     this.$photos.value = state.photos ?? []
   }
 
@@ -160,7 +159,7 @@ class GalleryInteractor extends Interactor<GalleryPageState> {
       case '01_stairs': return 'Лестницы'
       case '02_gates': return 'Ворота'
       case '03_balconys': return 'Балконы'
-      case '04_visors': return 'Козырьки'
+      case '04_visors': return 'Козырьки, входная конструкция'
       case '05_others': return 'Другое'
       default: return dirId
     }

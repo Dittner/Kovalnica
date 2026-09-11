@@ -1,4 +1,4 @@
-const echo = true
+const echo = document.location.hostname === 'localhost'
 //const echo = import.meta.env.VITE_ECHO === 'true'
 
 export const log = (...args: any[]) => {
@@ -15,3 +15,4 @@ export const logErr = (...args: any[]) => {
 
 console.log('Logger:', echo ? 'echo is on' : 'echo is off' )
 log('Logger is initialized')
+log('document.location:', document.location)

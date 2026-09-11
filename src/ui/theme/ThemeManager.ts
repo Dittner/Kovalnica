@@ -103,7 +103,7 @@ export class ThemeManager {
       id: 'light',
       isLight: true,
 
-      fontSizeXL: '3rem',
+      fontSizeXL: '2.5rem',
       fontSizeL: '2rem',
       fontSizeM: '1.8rem',
       fontSize: '1rem',
@@ -122,7 +122,7 @@ export class ThemeManager {
       text50: text + 'bb',
 
       red,
-      em: accent,
+      em: '#533a61',
       quote: '#1f5a72',
       black,
       white,
@@ -144,10 +144,10 @@ export class ThemeManager {
   * */
 
   createDarkTheme(t: GlobalTheme): GlobalTheme {
-    const red = '#c53665' //b9777d
+    const red = '#ae3e5e' //b9777d
     const black = '#0c0d0f' //121416
     const white = '#c1c6d2'
-    const accent = '#c1c6d2'  //b8c892 c693c3
+    const accent = '#ba566c'  //b8c892 c693c3
     const text = '#8f97aa' //707786
     const appBg = black
     const res = Object.assign({}, t, {
@@ -162,7 +162,7 @@ export class ThemeManager {
       text50: text + 'bb',
 
       red,
-      em: accent,
+      em: white,
       quote: '#698897', //6a87a0 
       black,
       white,
@@ -357,7 +357,6 @@ export class ThemeManager {
       textColor: t.em,
       fontStyle: 'normal',
       //bgImage: t.isLight ? 'linear-gradient(#4ed0ad00, #4ed0ad50)' : 'inherit',
-      bgColor: t.isLight ? '#b24ed050' : 'inherit',
       //paddingVertical: '5px'
     }
     buildRule(emphasizeProps, parentSelector, 'em')

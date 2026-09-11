@@ -24,7 +24,9 @@ export const GalleryView = () => {
     .children(() => {
 
       DirectoryList()
+        .observe(vm.$isPhotoViewerShown)
         .react(s => {
+          s.visible = !vm.$isPhotoViewerShown.value
           s.valign = 'center'
           s.halign = 'left'
           s.paddingHorizontal = layout().paddingHorizontal + 'px'
@@ -128,7 +130,7 @@ const PhotosList = (photos: IPhoto[]) => {
                     s.cursor = 'pointer'
                   })
                   .whenHovered(s => {
-                    s.outline = '10px solid ' + theme().red
+                    s.outline = '10px solid ' + theme().accent
                   })
                   .onClick(() => vm.openPhotoViewer(ph))
               }
@@ -142,6 +144,8 @@ const PhotosList = (photos: IPhoto[]) => {
 const PhotoViewer = () => {
   const vm = globalContext.vmFactory.getGalleryVM()
   return vstack()
+    .observe(vm.$selectedPhotoIndex, 'affectsChildrenProps')
+    .observe(vm.$photos, 'affectsChildrenProps')
     .children(() => {
 
       //header
@@ -163,7 +167,7 @@ const PhotoViewer = () => {
           })
             .children(() => {
               h5()
-                .observe(vm.$selectedPhotoIndex)
+
                 .react(s => {
                   const photo = vm.$selectedPhotoIndex.value < vm.$photos.value.length ? vm.$photos.value[vm.$selectedPhotoIndex.value] : undefined
                   s.textColor = darkTheme().header
@@ -171,7 +175,6 @@ const PhotoViewer = () => {
                 })
 
               p()
-                .observe(vm.$selectedPhotoIndex)
                 .react(s => {
                   s.fontFamily = FontFamily.MONO
                   s.textColor = darkTheme().text
@@ -182,20 +185,20 @@ const PhotoViewer = () => {
           spacer()
 
           Btn()
-            .observe(vm.$selectedPhotoIndex)
             .react(s => {
               s.iconSize = '1.2rem'
               s.icon = MaterialIcon.close
               s.text = 'Закрыть'
-              s.textColor = darkTheme().black
+              s.textColor = darkTheme().white
               s.paddingLeft = '10px'
               s.paddingRight = '15px'
               s.paddingVertical = '5px'
               s.popUp = 'Выйти из режима просмотра (ESC)'
-              s.bgColor = darkTheme().white
+              s.bgColor = darkTheme().transparent
+              s.borderColor = darkTheme().white
             })
             .whenHovered(s => {
-              s.bgColor = darkTheme().white + 'cc'
+              s.bgColor = darkTheme().white + '22'
             })
             .onClick(() => {
               vm.closePhotoViewer()
@@ -209,18 +212,17 @@ const PhotoViewer = () => {
         s.width = '100%'
         s.height = window.innerHeight - layout().navBarHeight + 'px'
         s.halign = 'center'
-        s.valign = 'center'
+        s.valign = layout().isMobile ? 'top' : 'center'
         s.paddingHorizontal = '50px'
       })
         .children(() => {
 
           NavBtn()
-            .observe(vm.$selectedPhotoIndex)
             .react(s => {
               s.position = 'absolute'
               s.left = layout().paddingHorizontal + 'px'
               if (layout().isMobile)
-                s.bottom = window.innerHeight / 4 + 'px'
+                s.bottom = '100px'
               s.icon = MaterialIcon.arrow_back
               s.isDisabled = !vm.canNavigatePrevPhoto()
               s.popUp = 'Предыдущее фото (клавиша влево)'
@@ -232,26 +234,24 @@ const PhotoViewer = () => {
           spacer()
 
           image()
-            .observe(vm.$selectedPhotoIndex)
             .react(s => {
               const photo = vm.$selectedPhotoIndex.value < vm.$photos.value.length ? vm.$photos.value[vm.$selectedPhotoIndex.value] : undefined
               s.src = photo?.path ?? ''
               s.loading = 'lazy'
               s.maxWidth = window.innerWidth + 'px'
               s.maxHeight = window.innerHeight - 50 - layout().navBarHeight + 'px'
-              s.border = '15px solid #ffFFff'
+              s.border = '10px solid #ffFFff'
               //s.outline = '20px solid ' + darkTheme().text50
             })
 
           spacer()
 
           NavBtn()
-            .observe(vm.$selectedPhotoIndex)
             .react(s => {
               s.position = 'absolute'
               s.right = layout().paddingHorizontal + 'px'
               if (layout().isMobile)
-                s.bottom = window.innerHeight / 4 + 'px'
+                s.bottom = '100px'
               s.icon = MaterialIcon.arrow_forward
               s.isDisabled = !vm.canNavigateNextPhoto()
               s.popUp = 'Следующее фото (клавиша вправо)'
@@ -270,15 +270,15 @@ const PhotoViewer = () => {
 const NavBtn = () => {
   return IconBtn()
     .react(s => {
-      s.iconSize = '1.4rem'
-      s.width = '60px'
-      s.height = '50px'
-      s.bgColor = darkTheme().red
+      s.iconSize = '1.3rem'
+      s.width = '50px'
+      s.height = '40px'
+      s.bgColor = darkTheme().accent
       s.textColor = '#ffFFff'
-      s.borderColor = darkTheme().red + '40'
+      s.borderColor = darkTheme().accent + '40'
       s.cornerRadius = '4px'
     })
     .whenHovered(s => {
-      s.bgColor = darkTheme().red + 'cc'
+      s.bgColor = darkTheme().accent + 'cc'
     })
 }

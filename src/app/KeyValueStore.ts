@@ -18,7 +18,7 @@ export class KeyValueStore {
   constructor(id: string) {
     this.id = id
     this.name = `${id}-KeyValueStore`
-    console.log('new ' + this.name)
+    log('new ' + this.name)
 
     this._data = Object.create(null)
     this.init()
@@ -32,7 +32,7 @@ export class KeyValueStore {
         this._isEmpty = json === '{}'
         this._data = fileContent
       } else {
-        console.log(this.name + ', no stored data')
+        log(this.name + ', no stored data')
       }
     } catch (e) {
       console.warn(this.name + ' ' + e)
