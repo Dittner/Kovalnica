@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "flinker": "^2.0.6",
-    "flinker-dom": "^1.1.22",
+    "flinker-dom": "^1.1.25",
     "flinker-markdown": "^1.1.32"
 },
 "devDependencies": {

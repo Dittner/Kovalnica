@@ -1,5 +1,5 @@
 :root {
-    --LineHeight: 1.6;
+    --LineHeight: 1.5;
     --font-family: -apple-system, 'system-ui', sans-serif;
     --font-family-mono: Menlo, 'jetbrains', source-code-pro, monospace;
     --font-family-article: 'verdana', -apple-system, 'system-ui', 'system-ui', sans-serif;
@@ -37,21 +37,21 @@ html {
 }
 
 @media screen and (max-width: 1000px) {
-  html {
-    font-size: 18px;
-  }
+    html {
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 900px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 480px) {
-  html {
-    font-size: 14px;
-  }
+    html {
+        font-size: 14px;
+    }
 }
 
 body {

@@ -1,4 +1,4 @@
-import { vstack } from "flinker-dom"
+import { iframe, vstack } from "flinker-dom"
 import { FontFamily } from "../../controls/Font"
 import { theme } from "../../theme/ThemeManager"
 import { Markdown } from "../../controls/Markdown"
@@ -10,13 +10,13 @@ export const ContactsView = () => {
   return vstack()
     .react(s => {
       s.width = '100%'
-      s.halign = 'center'
+      s.halign = 'left'
       s.valign = 'top'
-      s.paddingHorizontal = layout().contentLeftOffset + 'px'
+      s.paddingHorizontal = layout().contentLeftOffset + layout().paddingHorizontal + 'px'
       s.bgColor = theme().appBg
-      s.position = 'relative'
-      s.paddingVertical = '50px'
-      s.minHeight = window.innerHeight - layout().navBarHeight - layout().footerHeight  + 'px'
+      s.paddingVertical = '20px'
+      s.gap = '20px'
+      s.minHeight = window.innerHeight - layout().navBarHeight - layout().footerHeight + 'px'
     })
     .children(() => {
 
@@ -33,9 +33,15 @@ export const ContactsView = () => {
           //s.bgColor = '#00000088'
           s.textAlign = 'left'
           s.text = vm.$content.value
-          s.paddingHorizontal = layout().paddingHorizontal + 'px'
+        })
+
+      iframe()
+        .react(s => {
+          s.width = '100%'
+          s.height = '500px'
+          s.borderColor = '#00000000'
+          s.src = "https://yandex.ru/map-widget/v1/?um=constructor%3Abc748e63056de0b21dd18b05c5277a8e19ba530ec821721c8df71b8ab2cae056&amp;source=constructor"
         })
 
     })
 }
-

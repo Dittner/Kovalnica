@@ -5,6 +5,7 @@ import { globalContext } from '../App'
 export interface Layout {
   isMobile: boolean
   isCompact: boolean
+  isPortraitOrientation: boolean
   appHeaderHeight: number
   navBarHeight: number
   footerHeight: number
@@ -56,17 +57,18 @@ export class Application {
   
   private getLayout(): Layout {
     const windowWidth = window.innerWidth
-    const isCompact = this.isMobileDevice || windowWidth < 900
-    const contentWidth = isCompact ? windowWidth : 900
+    const isCompact = this.isMobileDevice || windowWidth < 1100
+    const contentWidth = isCompact ? Math.min(900, windowWidth) : 900
     
     log('Layout is changed, wid:', window.innerWidth)
 
     return {
       isMobile: this.isMobileDevice,
       isCompact,
+      isPortraitOrientation: window.innerWidth < window.innerHeight,
       appHeaderHeight: 400,
       navBarHeight: 100,
-      footerHeight: 200,
+      footerHeight: 100,
       paddingHorizontal: isCompact ? 20 : 40,
       contentLeftOffset: isCompact ? 0 : windowWidth/2 - contentWidth/2,
       windowWidth,

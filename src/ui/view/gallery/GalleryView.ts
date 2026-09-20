@@ -17,7 +17,7 @@ export const GalleryView = () => {
       s.halign = 'left'
       s.valign = 'top'
       s.paddingLeft = layout().contentLeftOffset + 'px'
-      s.paddingVertical = '50px'
+      s.paddingVertical = '20px'
       s.bgColor = theme().appBg
       s.minHeight = window.innerHeight - layout().navBarHeight - layout().footerHeight + 'px'
     })

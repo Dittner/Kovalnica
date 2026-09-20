@@ -24,7 +24,7 @@ export class Interactor<State> {
 
   async run(page: IPage) {
     if (this.isLoading) {
-      log('Got keys when loading')
+      log('Interactor: Got page when loading')
       this.newPage = page
       return
     }

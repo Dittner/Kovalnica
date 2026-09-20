@@ -17,6 +17,7 @@ export interface GlobalTheme {
   defFontWeight: FontWeight
   header: string
   accent: string
+  orange: string
   text: string
   text50: string
   caretColor: string
@@ -113,8 +114,8 @@ export class ThemeManager {
 
       defFontWeight: 'normal',
 
-      appBg: '#fafbfb',
-      navBarBg: '#ffFFff', //304041
+      appBg: '#eeeeee',
+      navBarBg: '#fbfbfb', //304041
 
       accent,
       header: '#444444',
@@ -127,6 +128,7 @@ export class ThemeManager {
       black,
       white,
       mark: '#b21d29',
+      orange: '#b2921d',
       menuSelected: accent,
       blue: '#005b90',
       border: '#b6c4cf',
@@ -154,7 +156,7 @@ export class ThemeManager {
       id: 'dark',
       isLight: false,
       appBg,
-      navBarBg: '#18191c',
+      navBarBg: '#0f0f11',
 
       accent,
       header: white,
@@ -167,6 +169,7 @@ export class ThemeManager {
       black,
       white,
       mark: '#dd7d85',
+      orange: '#e0be90',
       menuSelected: white,
       blue: '#225581',
       border: '#2d3338',
@@ -440,7 +443,7 @@ export class ThemeManager {
     /******************************/
 
     const imgProps: UIComponentProps = {
-      maxWidth: Math.min(800, window.screen.width - 40) + 'px',
+      maxWidth: Math.min(820, window.screen.width - 40) + 'px',
       //paddingTop: '50px'
     }
     buildRule(imgProps, parentSelector, 'img')

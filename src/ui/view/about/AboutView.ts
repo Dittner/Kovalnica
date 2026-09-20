@@ -1,9 +1,12 @@
-import { h1, image, p, spacer, vstack } from "flinker-dom"
+import { h1, hstack, p, spacer, span, vstack } from "flinker-dom"
 import { FontFamily } from "../../controls/Font"
 import { darkTheme, theme } from "../../theme/ThemeManager"
 import { Markdown } from "../../controls/Markdown"
 import { layout } from "../../../app/Application"
 import { globalContext } from "../../../App"
+import { Icon } from "../../controls/Button"
+import { MaterialIcon } from "../../icons/MaterialIcon"
+import { FittedImage } from "../../controls/Image"
 
 
 export const AboutView = () => {
@@ -19,23 +22,13 @@ export const AboutView = () => {
       Header()
         .react(s => {
           const l = layout()
-          //s.position = 'relative'
           s.paddingHorizontal = l.contentLeftOffset + 'px'
-
-          //s.top = '0'
           s.width = '100%'
-          //s.paddingTop = '50px'
-          //s.top = l.appHeaderHeight + 'px'
-          //s.height = l.appHeaderHeight + 'px'
           s.height = window.innerHeight - l.navBarHeight + 'px'
           s.halign = 'center'
           s.valign = 'center'
-          //s.paddingBottom = layout().statusBarHeight + 'px'
           s.bgColor = darkTheme().appBg
-          //s.layer = ViewLayer.TWO
           s.gap = '0'
-          //s.paddingHorizontal = '20px'
-          s.overflow = 'clip'
         })
 
       Markdown()
@@ -51,7 +44,7 @@ export const AboutView = () => {
           s.fontFamily = FontFamily.VERDANA
           s.textColor = theme().text
           s.width = layout().contentWidth + 'px'
-          //s.maxWidth = '700px'
+          //s.maxWidth = '800px'
           //s.bgColor = '#00000088'
           s.textAlign = 'left'
           s.text = vm.$content.value
@@ -64,14 +57,12 @@ export const AboutView = () => {
 export const Header = () => {
   return vstack()
     .children(() => {
-      image()
+      FittedImage()
         .react(s => {
-          s.top = '0'
-          s.src = 'resources/assets/app_bg.jpg'
-          const hei = Math.min(600, window.innerHeight / 2 - 50)
-          s.height = hei + 'px'
-          s.maxWidth = 'unset'
-          s.width = 'auto'
+          s.src = '/resources/assets/app_bg.jpg'
+          s.canvasWidth = Math.min(1920, layout().windowWidth)
+          s.canvasHeight = window.innerHeight / 2 - 50
+          s.fitTo = layout().isPortraitOrientation ? 'canvasHeight' : 'canvasWidth'
         })
 
       spacer()
@@ -87,6 +78,7 @@ export const Header = () => {
         s.text = 'Художественная'
         s.textColor = darkTheme().text
       })
+
       p().react(s => {
         s.fontFamily = FontFamily.HANDSCHRIFT
         s.fontSize = '1.8rem'
@@ -95,7 +87,41 @@ export const Header = () => {
         s.marginTop = '-30px'
       })
 
-      spacer()
+      Contacts()
 
+      spacer()
+    })
+}
+
+
+const Contacts = () => {
+  return hstack()
+    .react(s => {
+      const l = layout()
+      s.halign = 'center'
+      s.valign = 'bottom'
+      s.padding = '5px'
+      s.width = 'unset'
+      s.textColor = darkTheme().orange
+      s.fontSize = darkTheme().fontSizeXS
+      s.paddingTop = '100px'
+    })
+    .children(() => {
+      Icon().react(s => {
+        s.value = MaterialIcon.place
+      })
+      span()
+        .react(s => {
+          s.text = 'г. Воронеж,'
+          s.marginRight = '5px'
+        })
+
+      Icon().react(s => {
+        s.value = MaterialIcon.call
+      })
+      span()
+        .react(s => {
+          s.text = '+7 (950) 773-19-83'
+        })
     })
 }

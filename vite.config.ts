@@ -18,7 +18,7 @@ export default defineConfig({
   server: {
     allowedHosts: true,
     hmr: {
-      port: 3000
+      port: 3300
     }
   },
 

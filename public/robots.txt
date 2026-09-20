@@ -1,3 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
+User-Agent: *
+Allow: /
+Disallow: *.py
+Host: http://kovalnica.ru/
+Sitemap: http://kovalnica.ru/sitemap.txt

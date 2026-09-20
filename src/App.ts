@@ -1,4 +1,4 @@
-import { hlist, hstack, observer, p, spacer, vstack } from "flinker-dom"
+import { hlist, hstack, observer, p, spacer, span, vstack } from "flinker-dom"
 import { GlobalContext } from "./app/GlobalContext"
 import { FontFamily } from "./ui/controls/Font"
 import { darkTheme, theme, themeManager } from "./ui/theme/ThemeManager"
@@ -24,13 +24,17 @@ export function App() {
     .observe(globalContext.app.$layout, 'affectsProps', 'affectsChildrenProps')
     .react(s => {
       s.className = theme().id
-      s.width = '100vw'
+      s.width = '100%'
     })
     .children(() => {
       if (layout().isMobile)
         NavBarMobile()
       else
         NavBar()
+
+      spacer().react(s => {
+        s.height = layout().navBarHeight + 'px'
+      })
 
       observer(globalContext.$activeVM)
         .onReceive(vm => {
@@ -73,7 +77,7 @@ export const NavBarMobile = () => {
   return hstack()
     .react(s => {
       const l = layout()
-      s.position = 'sticky'
+      s.position = 'fixed'
       s.top = '0'
       s.width = '100%'
       s.height = l.navBarHeight + 'px'
@@ -111,14 +115,16 @@ export const NavBar = () => {
   return hstack()
     .react(s => {
       const l = layout()
-      s.position = 'sticky'
+      s.position = 'fixed'
       s.top = '0'
       s.width = '100%'
       s.height = l.navBarHeight + 'px'
       s.halign = 'center'
       s.valign = 'center'
       s.textColor = theme().text
-      s.bgColor = theme().navBarBg
+      s.bgColor = theme().navBarBg + 'cc'
+      s.blur = '10px'
+      s.borderBottom = '1px solid ' + theme().text + '22'
       s.layer = ViewLayer.TWO
       s.paddingHorizontal = l.contentLeftOffset + l.paddingHorizontal + 'px'
     })
@@ -137,7 +143,7 @@ export const NavBar = () => {
           s.valign = 'center'
           s.fontFamily = FontFamily.VERDANA
           s.fontSize = theme().fontSizeXS
-          s.gap = '40px'
+          s.gap = '20px'
           //s.paddingVertical = '20px'
         })
 
@@ -165,12 +171,12 @@ const PageUidRenderer = (uid: PageUid) => {
       s.textAlign = 'left'
       //s.width = '100%'
       s.paddingVertical = '10px'
-      s.paddingHorizontal = '10px'
+      s.paddingHorizontal = '20px'
       s.fontSize = theme().fontSize
       s.fontFamily = FontFamily.VERDANA
       s.textColor = theme().text
       s.text = pageUidToName(uid)
-      s.borderBottom = '2px solid ' + theme().transparent
+      s.borderBottom = '4px solid ' + theme().transparent
       s.href = '/' + uid
       s.whiteSpace = 'nowrap'
       s.textDecoration = 'none'
@@ -211,15 +217,6 @@ export const ThemeSwitcher = () => {
       themeManager.toggleTheme()
     })
     .children(() => {
-      // Icon().react(s => {
-      //   s.value = MaterialIcon.sunny
-      //   s.fontSize = theme().fontSizeXS
-      //   s.textAlign = 'center'
-      //   s.textColor = theme().id === 'light' ? theme().text : 'inherit'
-      // })
-
-      // spacer()
-
       Icon().react(s => {
         s.value = theme().id === 'light' ? MaterialIcon.light_mode : MaterialIcon.mode_night
         s.fontSize = theme().fontSizeS
@@ -231,31 +228,9 @@ export const ThemeSwitcher = () => {
 
 }
 
-export const ContactsPanel = () => {
-  return vstack()
-    .react(s => {
-      s.halign = 'center'
-      s.valign = 'center'
-      s.textColor = theme().text
-      s.gap = '0px'
-      s.fontSize = theme().fontSizeXS
-      s.padding = '20px'
-      //s.bgColor = theme().appBg
-      s.width = 'undefined'
-      s.layer = '100'
-    })
-    .children(() => {
-      ['«КОВАЛЬНИЦА»', 'г. Воронеж', ' +7 (950) 773-19-83', '(Александр Ковка)'].forEach(value => {
-        p()
-          .react(s => {
-            s.text = value
-            s.marginTop = '-2px'
-          })
-      })
-    })
-}
 
 export const AppFooter = () => {
+  const lines = ['«КОВАЛЬНИЦА»', '|', 'г. Воронеж', '|', ' +7 (950) 773-19-83', '|', 'Александр Ковка', '|', '© 2026, все права защищены']
   return vstack()
     .react(s => {
       s.width = '100%'
@@ -264,21 +239,34 @@ export const AppFooter = () => {
       s.valign = 'center'
       s.bgColor = darkTheme().appBg
       s.paddingVertical = '20px'
-      s.gap = '5px'
+      s.paddingHorizontal = layout().paddingHorizontal + 'px'
+      s.gap = '0px'
       s.layer = ViewLayer.ZERO
+
     }).children(() => {
       HSeparator().react(s => {
         s.width = layout().contentWidth - 2 * layout().paddingHorizontal + 'px'
       })
 
-      ContactsPanel()
+      spacer()
 
-      p().react(s => {
-        s.fontFamily = FontFamily.APP
-        s.fontSize = theme().fontSizeXS
-        s.textColor = darkTheme().text50
-        s.text = '© 2026, все права защищены'
-      })
+      p()
+        .react(s => {
+          s.width = '100%'
+          s.textAlign = 'center'
+          s.fontSize = darkTheme().fontSizeXS
+        })
+        .children(() => {
+          lines.forEach(value => {
+            span()
+              .react(s => {
+                s.whiteSpace = 'nowrap'
+                s.text = value
+                s.textColor = value === '|' ? darkTheme().text + '44' : darkTheme().text50
+                s.paddingHorizontal = '5px'
+              })
+          })
+        })
     })
 }
 

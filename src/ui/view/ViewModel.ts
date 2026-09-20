@@ -1,25 +1,24 @@
-import { IPage, URLNavigator } from "../../app/URLNavigator"
+import { IPage, PageUid, URLNavigator } from "../../app/URLNavigator"
 import { globalContext } from "../../App"
 import { Interactor } from "./Interactor"
 import { log } from "../../app/Logger"
 import { GlobalContext } from "../../app/GlobalContext"
 
-export type ViewModelID = 'about' | 'gallery' | 'contacts' | 'pageNotFound'
 export interface IViewModel {
-  readonly id: ViewModelID
+  readonly id: PageUid
   urlDidChange(page: IPage): void
   activate(): void
   deactivate(): void
 }
 
 export class ViewModel<ViewModelState> implements IViewModel {
-  readonly id: ViewModelID
+  readonly id: PageUid
   readonly ctx: GlobalContext
   readonly navigator: URLNavigator
   readonly interactor: Interactor<ViewModelState>
 
 
-  constructor(id: ViewModelID, ctx: GlobalContext, interactor: Interactor<ViewModelState>) {
+  constructor(id: PageUid, ctx: GlobalContext, interactor: Interactor<ViewModelState>) {
     this.id = id
     this.ctx = ctx
     this.navigator = globalContext.navigator
