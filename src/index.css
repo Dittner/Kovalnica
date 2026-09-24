@@ -76,6 +76,11 @@ body {
     /*overflow-y: scroll;*/
 }
 
+div#root_static {
+    color: #0c0d0f;
+    font-size: 1px;
+}
+
 body,
 p,
 a,
