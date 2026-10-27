@@ -4,7 +4,7 @@ import { Application, BrowserLocation, UpdateUrlMode } from "./Application"
 import { delay } from "./Utils"
 import { log, logErr, logWarn } from "./Logger"
 
-export type PageUid = 'about' | 'gallery' | 'contacts' | 'pageNotFound'
+export type PageUid = 'about' | 'gallery' | 'contacts' | 'newItems' | 'pageNotFound'
 
 export interface IPage {
   readonly uid: PageUid
@@ -50,6 +50,16 @@ export class ContactsPageMatcher implements IPageMatcher {
 }
 
 //---------------------------
+// NewItemsPage
+//---------------------------
+export class NewItemsPageMatcher implements IPageMatcher {
+  readonly uid = 'newItems'
+  match(locationPath: string, locationKeys: string[], locationParams: URLSearchParams): boolean {
+    return locationKeys.length > 0 && locationKeys[0] === 'newItems'
+  }
+}
+
+//---------------------------
 // PageNotFound
 //---------------------------
 export class PageNotFoundMatcher implements IPageMatcher {
@@ -61,7 +71,7 @@ export class PageNotFoundMatcher implements IPageMatcher {
 
 
 export class URLNavigator {
-  readonly allPagesUid: PageUid[] = ['about', 'gallery', 'contacts']
+  readonly allPagesUid: PageUid[] = ['about', 'gallery', 'contacts', 'newItems']
   readonly $activePage: RXObservableValue<IPage>
   readonly matchers: IPageMatcher[]
 
@@ -70,6 +80,7 @@ export class URLNavigator {
       new AboutPageMatcher(),
       new GalleryPageMatcher(),
       new ContactsPageMatcher(),
+      new NewItemsPageMatcher(),
       new PageNotFoundMatcher()
     ]
     this.$activePage = new RXObservableValue<IPage>({ uid: 'about', path: '', locationKeys: [], locationParams: new URLSearchParams() })

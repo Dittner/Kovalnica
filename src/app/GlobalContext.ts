@@ -9,6 +9,7 @@ import { AboutVM } from "../ui/view/about/AboutVM"
 import { ContactsVM } from "../ui/view/contacts/ContactsVM"
 import { GalleryVM } from "../ui/view/gallery/GalleryVM"
 import { PageNotFoundVM } from "../ui/view/pageNotFound/PageNotFoundVM"
+import { NewItemsVM } from "../ui/view/newItems/NewItemsVM"
 
 export interface Message {
   readonly level?: 'warning' | 'error' | 'info'
@@ -76,6 +77,12 @@ export class LazyVMFctory {
     return this._contactsVM
   }
 
+  private _newItemsVM?: NewItemsVM
+  getNewItemsVM(): NewItemsVM {
+    if (!this._newItemsVM) this._newItemsVM = new NewItemsVM(this.ctx)
+    return this._newItemsVM
+  }
+
   private _pageNotFoundVM?: PageNotFoundVM
   getPageNotFoundVM(): PageNotFoundVM {
     if (!this._pageNotFoundVM) this._pageNotFoundVM = new PageNotFoundVM(this.ctx)
@@ -95,6 +102,8 @@ export class Router {
           newVM = ctx.vmFactory.getGalleryVM()
         else if (page.uid === 'contacts')
           newVM = ctx.vmFactory.getContactsVM()
+        else if (page.uid === 'newItems')
+          newVM = ctx.vmFactory.getNewItemsVM()
         else
           newVM = ctx.vmFactory.getPageNotFoundVM()
 

@@ -7,5 +7,5 @@ import { App } from './App';
 
 
 const app = App()
-document.getElementById('root_static')!.remove() //for indexing by robot only
+//document.getElementById('root_static')!.remove() //for indexing by robot only
 document.getElementById('root')!.appendChild(app.dom)

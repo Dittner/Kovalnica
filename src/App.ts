@@ -13,6 +13,7 @@ import { ContactsView } from "./ui/view/contacts/ContactsView"
 import { PageNotFoundView } from "./ui/view/pageNotFound/PageNotFoundView"
 import { GalleryView } from "./ui/view/gallery/GalleryView"
 import { HSeparator } from "./ui/controls/Separator"
+import { NewItemsView } from "./ui/view/newItems/NewItemsView"
 
 export const globalContext = GlobalContext.init()
 
@@ -42,6 +43,7 @@ export function App() {
           if (vm.id === 'about') return AboutView()
           else if (vm.id === 'gallery') return GalleryView()
           else if (vm.id === 'contacts') return ContactsView()
+          else if (vm.id === 'newItems') return NewItemsView()
           else return PageNotFoundView()
         })
 
@@ -102,7 +104,7 @@ export const NavBarMobile = () => {
           s.halign = 'center'
           s.fontFamily = FontFamily.VERDANA
           s.fontSize = theme().fontSizeXS
-          s.gap = '20px'
+          s.gap = '0px'
           //s.paddingVertical = '20px'
         })
 
@@ -158,6 +160,7 @@ const pageUidToName = (uid: PageUid): string => {
     case 'about': return 'О нас'
     case 'gallery': return 'Галерея'
     case 'contacts': return 'Контакты'
+    case 'newItems': return 'Новинки'
     default: return uid
   }
 }
@@ -171,8 +174,8 @@ const PageUidRenderer = (uid: PageUid) => {
       s.textAlign = 'left'
       //s.width = '100%'
       s.paddingVertical = '10px'
-      s.paddingHorizontal = '20px'
-      s.fontSize = theme().fontSize
+      s.paddingHorizontal = '10px'
+      s.fontSize = theme().fontSizeS
       s.fontFamily = FontFamily.VERDANA
       s.textColor = theme().text
       s.text = pageUidToName(uid)

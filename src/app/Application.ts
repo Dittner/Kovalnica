@@ -42,6 +42,7 @@ export class Application {
     this.$location = new RXObservableValue({ path: document.location.pathname, queries: document.location.search })
 
     this.$windowWidth.pipe()
+      .skipFirst()
       .debounce(1000)
       .onReceive(_ => this.$layout.value = this.getLayout())
       .subscribe()
@@ -54,12 +55,12 @@ export class Application {
     this.updateLocation()
   }
 
-  
+
   private getLayout(): Layout {
     const windowWidth = window.innerWidth
     const isCompact = this.isMobileDevice || windowWidth < 1100
     const contentWidth = isCompact ? Math.min(900, windowWidth) : 900
-    
+
     log('Layout is changed, wid:', window.innerWidth)
 
     return {
@@ -70,7 +71,7 @@ export class Application {
       navBarHeight: 100,
       footerHeight: 100,
       paddingHorizontal: isCompact ? 20 : 40,
-      contentLeftOffset: isCompact ? 0 : windowWidth/2 - contentWidth/2,
+      contentLeftOffset: isCompact ? 0 : windowWidth / 2 - contentWidth / 2,
       windowWidth,
       contentWidth,
       pageWidth: document.documentElement.clientWidth,
